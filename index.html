@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Website</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo-wrap">
+                <img src="assets/logo.png" alt="School Logo" class="logo">
+                <h2>Our Website</h2>
+            </div>
+            <div class="list">
+                <a href="index.html">Home</a>
+                <a href="#">Our Profile</a>
+                <a href="#">Achievement</a>
+                <a href="#message">Message Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h1>Hi <span id="userName">Guest</span>, Welcome To My Website</h1>
+            <p>This is my first website</p>
+            <!-- Banner Image -->
+            <div>
+                <img class="banner" src="assets\banner1.jpg" />
+                <img class="banner" src="assets\banner2.jpg" />
+                <img class="banner" src="assets\banner3.jpg" />
+                </div>
+        </section>
+
+        <section id="facilitation">
+            <h2>Our Profile</h2>
+            <div class="facilities">
+                <div class="teacher">UI/UX Design</div>
+                <div class="sport">Front End Developer</div>
+                <div class="room">Back End Developer</div>
+            </div>
+        </section>
+
+        <section id="message">
+            <h2>Message Us</h2>
+            <div class="message-container">
+                <form id="contactForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="dob">Tanggal Lahir:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label>Jenis Kelamin:</label>
+                    <div class="gender-options">
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" required> Laki-Laki
+                        <input type="radio" id="female" name="gender" value="Perempuan"> Perempuan
+                    </div>
+
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="empty-box" id="output"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by <a href="https://www.linkedin.com/in/gilang-pramudias-8009a7212/">Pramudias</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
