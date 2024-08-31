@@ -24,26 +24,26 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('userName').textContent = userName || 'Guest';
     });
 
-    // Banner auto slide
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-    function showDivs(n) {
-        var i;
-        var banner = document.getElementsByClassName("banner");
-        if (n > banner.length) { slideIndex = 1 }
-        else if (n < 1) { slideIndex = banner.length };
-        for (i = 0; i < banner.length; i++) {
-            banner[i].style.display = "none";
-        }
-        banner[slideIndex - 1].style.display = "block";
-    }
-
-    setInterval(() => {
-        plusDivs(1);
-    }, 2000);
-
 });
+
+// Banner auto slide
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+function showDivs(n) {
+    var i;
+    var banner = document.getElementsByClassName("banner");
+    if (n > banner.length) { slideIndex = 1 }
+    else if (n < 1) { slideIndex = banner.length };
+    for (i = 0; i < banner.length; i++) {
+        banner[i].style.display = "none";
+    }
+    banner[slideIndex - 1].style.display = "block";
+}
+
+setInterval(() => {
+    plusDivs(1);
+}, 2000);
